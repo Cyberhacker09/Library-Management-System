@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home/style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Library</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="#">Books</a>
+            <a href="#">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Crazy Library</h2>
+        <p>Explore more than thousands of books and manage your library account easily.</p>
+        <button>Browse Books</button>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search">
+        <input type="text" id="searchInput" placeholder="Search books by title or author...">
+        <button onclick="searchBooks()">Search</button>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="books">
+        <h3>Featured Books</h3>
+        <div class="book-list" id="bookList">
+            <!-- Books will be generated here dynamically -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Library. All rights reserved.</p>
+        <p>Contact: info@mylibrary.com</p>
+    </footer>
+
+    <script src="/LibraryManagementSystem/static/home/script.js"></script>
+</body>
+</html>

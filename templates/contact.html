@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library - Contact</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='auth/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+
+    <form method="post" action="{{ url_for('contact') }}">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+  </div>
+</body>
+</html>
