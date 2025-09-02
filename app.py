@@ -78,12 +78,12 @@ def contact():
         msg = MIMEText(f"Message from {name} ({email}):\n\n{message}")
         msg['Subject'] = 'Library Contact Form'
         msg['From'] = email
-        msg['To'] = "example@gmail.com"  // use your own mail id for it
+        msg['To'] = "example@gmail.com"  # use your own mail id for it
 
         try:
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
-            server.login("example@gmail.com", "0000 0000 0000 0000")  // use your own email id and app password created in gmail for it
+            server.login("example@gmail.com", "0000 0000 0000 0000")  #use your own email id and app password created in gmail for it
             server.sendmail(email, "adminemail@gmail.com", msg.as_string())
             server.quit()
             flash('Your message has been sent successfully!', 'success')
