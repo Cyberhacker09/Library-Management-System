@@ -11,8 +11,8 @@ def connect_db():
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="#Password#", //use your own password for mySQL login
-            database="#database", // use your own Database you set up for this
+            password="#Password#",# use your own password for mySQL login
+            database="#database", # use your own Database you set up for this
             auth_plugin="mysql_native_password"  # ✅ Fix: force plugin
         )
         if connection.is_connected():
